@@ -1,3 +1,56 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* ============================
+   Variables
+============================ */
+:root {
+  /* font-family */
+  --font-family: 'Pretendard', sans-serif;
+
+  /* font-size */
+  --font-size-headline1: 18px;
+  --font-size-headline2: 16px;
+  --font-size-contents1: 15px;
+  --font-size-contents2: 14px;
+  --font-size-contents3: 13px;
+  --font-size-contents4: 12px;
+
+  /* font-weight */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-regular: 400;
+
+  /* line-height & letter-spacing (공통) */
+  --line-height-base: 1.6;
+  --letter-spacing-base: -0.02em;
+
+  /* ── Color ───────────────────── */
+
+  /* Main */
+  --main-red: #fe5653;
+
+  /* Font */
+  --font-darkgray: #222;
+  --font-gray: #666;
+  --font-lightgray: #999;
+  --font-blue: #009df8;
+  --font-orange: #ff9b47;
+
+  /* Line */
+  --line-gray: #d7d7d7;
+  --line-light: #eee;
+
+  /* Bg */
+  --bg-light: #f9f9f9;
+  --bg-gray: #f4f4f4;
+  --bg-pink: #fff5f5;
+  --bg-skyblue: #f4f9ff;
+  --bg-orange: #fff9f4;
+}
+
+/* ============================
+   Reset
+============================ */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +58,148 @@
 }
 
 body {
-  font-family: 'Pretendard', sans-serif;
+  font-family: var(--font-family);
   color: #222;
+}
+
+/* ============================
+   Typography
+============================ */
+
+/* Headline1 — 18px */
+.headline1-bold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-headline1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.headline1-semibold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-headline1);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.headline1-regular {
+  font-family: var(--font-family);
+  font-size: var(--font-size-headline1);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* Headline2 — 16px */
+.headline2-bold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-headline2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.headline2-semibold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-headline2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.headline2-regular {
+  font-family: var(--font-family);
+  font-size: var(--font-size-headline2);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* Contents1 — 15px */
+.contents1-bold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents1-semibold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents1);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents1-regular {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents1);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* Contents2 — 14px */
+.contents2-bold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents2-semibold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents2-regular {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents2);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* Contents3 — 13px */
+.contents3-bold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents3-semibold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents3-regular {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents3);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* Contents4 — 12px */
+.contents4-bold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents4);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents4-semibold {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+.contents4-regular {
+  font-family: var(--font-family);
+  font-size: var(--font-size-contents4);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
 }
