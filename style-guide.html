@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>스룩페이 Style Guide</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="sg-body">
   <div class="sg-wrap">
@@ -617,16 +617,8 @@
         <h3 class="sg-sub-title">input_box_L — height 38px</h3>
         <div class="sg-input-states">
           <div>
-            <p class="sg-preview-label">placeholder</p>
+            <p class="sg-preview-label">default</p>
             <input type="text" class="input" placeholder="placeholder">
-          </div>
-          <div>
-            <p class="sg-preview-label">focus</p>
-            <input type="text" class="input input--focus" placeholder="focus">
-          </div>
-          <div>
-            <p class="sg-preview-label">filled</p>
-            <input type="text" class="input" value="입력된 텍스트">
           </div>
           <div>
             <p class="sg-preview-label">readonly</p>
@@ -640,24 +632,30 @@
         <h3 class="sg-sub-title">input_box_L — 아이콘 포함 (input_S_icon)</h3>
         <div class="sg-input-states">
           <div>
-            <p class="sg-preview-label">ic_date_set (날짜 선택)</p>
-            <div class="input-wrap">
-              <input type="text" class="input-wrap__field" placeholder="날짜를 선택하세요">
-              <img src="icon/input/ic_date_set.svg" alt="날짜 선택" class="input-wrap__icon">
+            <p class="sg-preview-label">ic_date_set (날짜 선택 → ic_del 표시)</p>
+            <div class="input-wrap" id="date-wrap">
+              <input type="text" class="input-wrap__field" id="date-display" placeholder="날짜를 선택하세요" readonly>
+              <input type="date" id="date-native"
+                     style="position:absolute;right:0;bottom:-1px;opacity:0;pointer-events:none;width:1px;height:1px;"
+                     tabindex="-1">
+              <img src="icon/input/ic_del.svg" alt="삭제" id="date-del" class="input-wrap__icon" style="display:none;cursor:pointer;">
+              <img src="icon/input/ic_date_set.svg" alt="날짜 선택" id="date-set" class="input-wrap__icon" style="cursor:pointer;">
             </div>
           </div>
           <div>
             <p class="sg-preview-label">ic_search (검색)</p>
             <div class="input-wrap">
               <input type="text" class="input-wrap__field" placeholder="검색어를 입력하세요">
-              <img src="icon/input/ic_search.svg" alt="검색" class="input-wrap__icon">
+              <button type="button" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;padding:0;margin-right:10px;background:none;border:none;cursor:pointer;flex-shrink:0;" aria-label="검색">
+                <img src="icon/input/ic_search.svg" alt="" style="width:22px;height:22px;display:block;">
+              </button>
             </div>
           </div>
           <div>
-            <p class="sg-preview-label">ic_del (삭제 — 입력값 있을 때)</p>
-            <div class="input-wrap">
-              <input type="text" class="input-wrap__field" value="입력된 텍스트">
-              <img src="icon/input/ic_del.svg" alt="삭제" class="input-wrap__icon" style="cursor:pointer;">
+            <p class="sg-preview-label">ic_del (텍스트 삭제)</p>
+            <div class="input-wrap" id="del-wrap">
+              <input type="text" class="input-wrap__field" id="del-input" placeholder="입력 후 삭제 아이콘 표시">
+              <img src="icon/input/ic_del.svg" alt="삭제" id="del-btn" class="input-wrap__icon" style="display:none;cursor:pointer;">
             </div>
           </div>
         </div>
@@ -668,16 +666,8 @@
         <h3 class="sg-sub-title">inout_box_XL — height 46px</h3>
         <div class="sg-input-states">
           <div>
-            <p class="sg-preview-label">Default (placeholder)</p>
+            <p class="sg-preview-label">default</p>
             <input type="text" class="input input--xl" placeholder="placeholder">
-          </div>
-          <div>
-            <p class="sg-preview-label">focus</p>
-            <input type="text" class="input input--xl input--focus" placeholder="focus">
-          </div>
-          <div>
-            <p class="sg-preview-label">filled</p>
-            <input type="text" class="input input--xl" value="입력된 텍스트">
           </div>
           <div>
             <p class="sg-preview-label">disabled</p>
@@ -691,27 +681,11 @@
         <h3 class="sg-sub-title">input_code_num — 인증번호 <code style="font-size:11px;color:var(--font-blue)">type="tel" inputmode="numeric"</code></h3>
         <div class="sg-input-states">
           <div>
-            <p class="sg-preview-label">Default</p>
+            <p class="sg-preview-label">default (03:00부터 카운트다운)</p>
             <div class="input-code-wrap">
               <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="6"
                      class="input-code-wrap__field" placeholder="인증번호 입력">
-              <span class="input-code-wrap__timer">02:47</span>
-            </div>
-          </div>
-          <div>
-            <p class="sg-preview-label">focus</p>
-            <div class="input-code-wrap input-code-wrap--focus">
-              <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="6"
-                     class="input-code-wrap__field" value="123456">
-              <span class="input-code-wrap__timer">02:47</span>
-            </div>
-          </div>
-          <div>
-            <p class="sg-preview-label">filled</p>
-            <div class="input-code-wrap">
-              <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="6"
-                     class="input-code-wrap__field" value="123456">
-              <span class="input-code-wrap__timer">02:47</span>
+              <span class="input-code-wrap__timer" id="code-timer">03:00</span>
             </div>
           </div>
           <div>
@@ -730,7 +704,7 @@
         <h3 class="sg-sub-title">label_input_box (label + input + message 조합)</h3>
         <div class="sg-input-states">
           <div>
-            <p class="sg-preview-label">기본 (도움말)</p>
+            <p class="sg-preview-label">default</p>
             <div class="input-group">
               <label class="input-label">레이블</label>
               <input type="text" class="input input--xl" placeholder="placeholder">
@@ -738,31 +712,15 @@
             </div>
           </div>
           <div>
-            <p class="sg-preview-label">필수입력 (도움말)</p>
+            <p class="sg-preview-label">필수입력</p>
             <div class="input-group">
               <label class="input-label">레이블<span class="input-label__required">*</span></label>
               <input type="text" class="input input--xl" placeholder="placeholder">
-              <p class="input-msg input-msg--help">도움말 메세지를 나타냅니다.</p>
-            </div>
-          </div>
-          <div>
-            <p class="sg-preview-label">에러 상태</p>
-            <div class="input-group">
-              <label class="input-label">레이블<span class="input-label__required">*</span></label>
-              <input type="text" class="input input--xl input--focus" value="잘못된 입력값">
               <p class="input-msg input-msg--error">에러 메세지를 나타냅니다.</p>
             </div>
           </div>
           <div>
-            <p class="sg-preview-label">성공 상태</p>
-            <div class="input-group">
-              <label class="input-label">레이블</label>
-              <input type="text" class="input input--xl" value="올바른 입력값">
-              <p class="input-msg input-msg--success">성공 메세지를 나타냅니다.</p>
-            </div>
-          </div>
-          <div>
-            <p class="sg-preview-label">비활성화</p>
+            <p class="sg-preview-label">disabled</p>
             <div class="input-group">
               <label class="input-label">레이블</label>
               <input type="text" class="input input--xl" value="비활성화 입력값" disabled>
@@ -812,26 +770,22 @@
       <div>
         <h3 class="sg-sub-title">select_box_XL (height 46px)</h3>
         <div class="sg-input-states">
+
           <div>
-            <p class="sg-preview-label">Default</p>
-            <div class="select-wrap">
-              <select class="select">
-                <option value="">선택</option>
-                <option value="1">메뉴1</option>
-                <option value="2">메뉴2</option>
-              </select>
+            <p class="sg-preview-label">default</p>
+            <div class="select-custom" id="sg-select-1">
+              <button type="button" class="select-custom__trigger" id="sg-select-1-btn">
+                <span class="select-custom__text">선택</span>
+                <img src="icon/input/ic_select_arrow.svg" alt="" class="select-custom__arrow">
+              </button>
+              <div class="select-custom__menu" id="sg-select-1-menu">
+                <button type="button" class="select-custom__item">선택</button>
+                <button type="button" class="select-custom__item">메뉴1</button>
+                <button type="button" class="select-custom__item">메뉴2</button>
+              </div>
             </div>
           </div>
-          <div>
-            <p class="sg-preview-label">select (값 선택됨)</p>
-            <div class="select-wrap">
-              <select class="select">
-                <option value="">선택</option>
-                <option value="1" selected>메뉴1</option>
-                <option value="2">메뉴2</option>
-              </select>
-            </div>
-          </div>
+
           <div>
             <p class="sg-preview-label">disabled</p>
             <div class="select-wrap select-wrap--disabled">
@@ -840,6 +794,7 @@
               </select>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -887,23 +842,15 @@
         <h3 class="sg-sub-title">textarea (min-height 92px)</h3>
         <div class="sg-input-states">
           <div>
-            <p class="sg-preview-label">placeholder</p>
+            <p class="sg-preview-label">default</p>
             <textarea class="textarea" placeholder="placeholder"></textarea>
-          </div>
-          <div>
-            <p class="sg-preview-label">focus</p>
-            <textarea class="textarea input--focus">focus</textarea>
-          </div>
-          <div>
-            <p class="sg-preview-label">filled</p>
-            <textarea class="textarea">입력된 텍스트 내용입니다.</textarea>
           </div>
           <div>
             <p class="sg-preview-label">readonly</p>
             <textarea class="textarea" readonly>읽기 전용 텍스트입니다.</textarea>
           </div>
           <div>
-            <p class="sg-preview-label">max-length (글자 수 표시)</p>
+            <p class="sg-preview-label">max-length (150자 카운트)</p>
             <div class="textarea-wrap">
               <textarea class="textarea" id="textarea-count-1" placeholder="placeholder" maxlength="150"></textarea>
               <span class="textarea-wrap__counter" id="counter-1">0 / 150자</span>
@@ -1027,12 +974,26 @@
             <button type="button" class="btn btn--xl btn--black">버튼명</button>
           </div>
           <div>
-            <p class="sg-preview-label">lineBK (테두리 검정)</p>
+            <p class="sg-preview-label">lineBK</p>
             <button type="button" class="btn btn--xl btn--line-bk">버튼명</button>
           </div>
           <div>
-            <p class="sg-preview-label">lineGR (테두리 회색)</p>
+            <p class="sg-preview-label">lineBK_icon</p>
+            <button type="button" class="btn btn--xl btn--line-bk btn--icon">
+              버튼명
+              <img src="icon/input/ic_arrow_bottom.svg" alt="" class="btn__icon">
+            </button>
+          </div>
+          <div>
+            <p class="sg-preview-label">lineGR</p>
             <button type="button" class="btn btn--xl btn--line-gr">버튼명</button>
+          </div>
+          <div>
+            <p class="sg-preview-label">lineGR_icon</p>
+            <button type="button" class="btn btn--xl btn--line-gr btn--icon">
+              버튼명
+              <img src="icon/input/ic_arrow_bottom.svg" alt="" class="btn__icon">
+            </button>
           </div>
           <div>
             <p class="sg-preview-label">red</p>
@@ -1058,8 +1019,22 @@
             <button type="button" class="btn btn--l btn--line-bk">버튼명</button>
           </div>
           <div>
+            <p class="sg-preview-label">lineBK_icon</p>
+            <button type="button" class="btn btn--l btn--line-bk btn--icon">
+              버튼명
+              <img src="icon/input/ic_plus.svg" alt="" class="btn__icon">
+            </button>
+          </div>
+          <div>
             <p class="sg-preview-label">lineGR</p>
             <button type="button" class="btn btn--l btn--line-gr">버튼명</button>
+          </div>
+          <div>
+            <p class="sg-preview-label">lineGR_icon</p>
+            <button type="button" class="btn btn--l btn--line-gr btn--icon">
+              버튼명
+              <img src="icon/input/ic_plus.svg" alt="" class="btn__icon">
+            </button>
           </div>
           <div>
             <p class="sg-preview-label">red</p>
@@ -1085,8 +1060,22 @@
             <button type="button" class="btn btn--m btn--line-bk">버튼명</button>
           </div>
           <div>
+            <p class="sg-preview-label">lineBK_icon</p>
+            <button type="button" class="btn btn--m btn--line-bk btn--icon">
+              버튼명
+              <img src="icon/input/ic_plus.svg" alt="" class="btn__icon">
+            </button>
+          </div>
+          <div>
             <p class="sg-preview-label">lineGR</p>
             <button type="button" class="btn btn--m btn--line-gr">버튼명</button>
+          </div>
+          <div>
+            <p class="sg-preview-label">lineGR_icon</p>
+            <button type="button" class="btn btn--m btn--line-gr btn--icon">
+              버튼명
+              <img src="icon/input/ic_plus.svg" alt="" class="btn__icon">
+            </button>
           </div>
           <div>
             <p class="sg-preview-label">red</p>
@@ -1137,30 +1126,16 @@
       <h2 class="sg-section-title">Upload Image</h2>
 
       <div>
-        <h3 class="sg-sub-title">upload_img_box</h3>
-        <div class="sg-preview--pad" style="flex-direction:row; gap:8px; align-items:flex-start;">
-          <!-- add_img: 파일 선택 버튼 -->
-          <label class="upload-img-btn" title="이미지 추가">
-            <input type="file" accept="image/*" class="upload-img-btn__input" aria-label="이미지 업로드">
-            <img src="icon/input/ic_camera.svg" alt="이미지 추가" class="upload-img-btn__icon">
-          </label>
-          <!-- upload: 업로드된 이미지 (예시) -->
-          <div class="upload-img-item">
-            <img src="https://placehold.co/70x70" alt="업로드된 이미지" class="upload-img-item__img">
-            <button type="button" class="upload-img-item__del" aria-label="이미지 삭제">✕</button>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="sg-sub-title">label_upload_img (label + upload 조합)</h3>
+        <h3 class="sg-sub-title">label_upload_img — 최대 5장, 카메라 버튼 고정(왼쪽), 이미지 우측으로 추가</h3>
         <div class="sg-input-states">
           <div class="input-group">
-            <label class="input-label">이미지 첨부<span class="input-label__required">*</span></label>
-            <div class="upload-img-wrap">
-              <label class="upload-img-btn" title="이미지 추가">
-                <input type="file" accept="image/*" multiple class="upload-img-btn__input" aria-label="이미지 업로드">
-                <img src="icon/input/ic_camera.svg" alt="이미지 추가" class="upload-img-btn__icon">
+            <label class="input-label">사진 추가<span class="input-label__required">*</span></label>
+            <div class="upload-img-wrap" id="upload-wrap">
+              <!-- 카메라 버튼 (add_img) — 5장 채워지면 JS로 숨김 -->
+              <label class="upload-img-btn" id="upload-add-btn" title="이미지 추가">
+                <input type="file" accept="image/*" multiple id="upload-input"
+                       class="upload-img-btn__input" aria-label="이미지 업로드">
+                <img src="icon/input/ic_camera.svg" alt="" class="upload-img-btn__icon">
               </label>
             </div>
             <p class="input-msg input-msg--help">최대 5장까지 업로드 가능합니다.</p>
@@ -1219,18 +1194,227 @@
 
   </div>
 <script>
+  /* ── textarea 글자 수 카운터 ─────────────────────── */
   document.querySelectorAll('textarea[maxlength]').forEach(function(ta) {
     var counterId = ta.id.replace('textarea-count', 'counter');
     var counter = document.getElementById(counterId);
     if (!counter) return;
-
     var max = ta.getAttribute('maxlength');
     counter.textContent = '0 / ' + max + '자';
-
     ta.addEventListener('input', function() {
       counter.textContent = ta.value.length + ' / ' + max + '자';
     });
   });
+
+  /* ── ic_date_set — Date Picker ───────────────────── */
+  var dateSet    = document.getElementById('date-set');
+  var dateNative = document.getElementById('date-native');
+  var dateDisplay= document.getElementById('date-display');
+  var dateDel    = document.getElementById('date-del');
+
+  if (dateSet) {
+    dateSet.addEventListener('click', function() {
+      if (dateNative.showPicker) {
+        dateNative.showPicker();
+      } else {
+        dateNative.click();
+      }
+    });
+
+    dateNative.addEventListener('change', function() {
+      if (!dateNative.value) return;
+      var parts = dateNative.value.split('-');        /* ["2026","05","12"] */
+      dateDisplay.value = parts[0] + '.' + parts[1] + '.' + parts[2];
+      dateDel.style.display = 'block';
+    });
+
+    dateDel.addEventListener('click', function() {
+      dateDisplay.value = '';
+      dateNative.value  = '';
+      dateDel.style.display = 'none';
+    });
+  }
+
+  /* ── ic_del — 텍스트 입력 시 삭제 아이콘 표시 ──────── */
+  var delInput = document.getElementById('del-input');
+  var delBtn   = document.getElementById('del-btn');
+
+  if (delInput) {
+    delInput.addEventListener('input', function() {
+      delBtn.style.display = delInput.value.length > 0 ? 'block' : 'none';
+    });
+    delBtn.addEventListener('click', function() {
+      delInput.value = '';
+      delBtn.style.display = 'none';
+      delInput.focus();
+    });
+  }
+
+  /* ── input_code_num — 03:00 카운트다운 ──────────────── */
+  function formatTime(sec) {
+    var m = Math.floor(sec / 60);
+    var s = sec % 60;
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  var timerEl = document.getElementById('code-timer');
+
+  if (timerEl) {
+    var total = 180;
+    timerEl.textContent = formatTime(total);
+
+    var codeInterval = setInterval(function() {
+      total -= 1;
+      timerEl.textContent = formatTime(total);
+      if (total <= 0) {
+        clearInterval(codeInterval);
+        timerEl.textContent = '00:00';
+        timerEl.style.opacity = '0.4';
+      }
+    }, 1000);
+  }
+
+  /* ── Custom Select Dropdown ──────────────────────── */
+  document.querySelectorAll('.select-custom__trigger[id]').forEach(function(btn) {
+    var menuId = btn.id.replace('-btn', '-menu');
+    var menu   = document.getElementById(menuId);
+    if (!menu) return;
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('is-open');
+      /* 다른 드롭다운 닫기 */
+      document.querySelectorAll('.select-custom__menu.is-open').forEach(function(m) {
+        m.classList.remove('is-open');
+        m.previousElementSibling && m.previousElementSibling.classList.remove('is-active');
+      });
+      if (!isOpen) {
+        menu.classList.add('is-open');
+        btn.classList.add('is-active');
+      }
+    });
+
+    menu.querySelectorAll('.select-custom__item').forEach(function(item) {
+      item.addEventListener('click', function() {
+        btn.querySelector('.select-custom__text').textContent = item.textContent;
+        menu.classList.remove('is-open');
+        btn.classList.remove('is-active');
+      });
+    });
+  });
+
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.select-custom__menu.is-open').forEach(function(m) {
+      m.classList.remove('is-open');
+      m.previousElementSibling && m.previousElementSibling.classList.remove('is-active');
+    });
+  });
+
+  /* ── Upload Image — 최대 5장, 삭제 기능 ─────────────── */
+  var uploadInput  = document.getElementById('upload-input');
+  var uploadWrap   = document.getElementById('upload-wrap');
+  var uploadAddBtn = document.getElementById('upload-add-btn');
+  var MAX_IMAGES   = 5;
+
+  function getUploadCount() {
+    return uploadWrap ? uploadWrap.querySelectorAll('.upload-img-item').length : 0;
+  }
+
+  function syncAddBtn() {
+    if (!uploadAddBtn) return;
+    uploadAddBtn.style.display = getUploadCount() >= MAX_IMAGES ? 'none' : 'flex';
+  }
+
+  function createImageItem(src) {
+    var item = document.createElement('div');
+    item.className = 'upload-img-item';
+
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = '업로드된 이미지';
+    img.className = 'upload-img-item__img';
+
+    var delBtn = document.createElement('button');
+    delBtn.type = 'button';
+    delBtn.className = 'upload-img-item__del';
+    delBtn.setAttribute('aria-label', '이미지 삭제');
+    delBtn.innerHTML = '<img src="icon/input/img_del.svg" alt="">';
+
+    delBtn.addEventListener('click', function() {
+      uploadWrap.removeChild(item);
+      syncAddBtn();
+    });
+
+    item.appendChild(img);
+    item.appendChild(delBtn);
+    return item;
+  }
+
+  if (uploadInput) {
+    uploadInput.addEventListener('change', function() {
+      var files   = Array.from(uploadInput.files);
+      var remain  = MAX_IMAGES - getUploadCount();
+      var toAdd   = files.slice(0, remain);
+
+      toAdd.forEach(function(file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var item = createImageItem(e.target.result);
+          /* 카메라 버튼은 항상 첫번째 — 이미지는 오른쪽에 추가 */
+          uploadWrap.appendChild(item);
+          syncAddBtn();
+        };
+        reader.readAsDataURL(file);
+      });
+
+      uploadInput.value = '';
+    });
+  }
+
+  /* ── Upload Image — PC 드래그 스크롤 ─────────────── */
+  (function() {
+    if (!uploadWrap) return;
+    var isDown   = false;
+    var startX   = 0;
+    var scrollLeft = 0;
+    var moved    = false;
+
+    uploadWrap.addEventListener('mousedown', function(e) {
+      isDown     = true;
+      moved      = false;
+      startX     = e.pageX - uploadWrap.offsetLeft;
+      scrollLeft = uploadWrap.scrollLeft;
+      uploadWrap.classList.add('is-dragging');
+    });
+
+    document.addEventListener('mouseup', function() {
+      isDown = false;
+      uploadWrap.classList.remove('is-dragging');
+    });
+
+    uploadWrap.addEventListener('mouseleave', function() {
+      isDown = false;
+      uploadWrap.classList.remove('is-dragging');
+    });
+
+    uploadWrap.addEventListener('mousemove', function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x    = e.pageX - uploadWrap.offsetLeft;
+      var walk = x - startX;
+      if (Math.abs(walk) > 3) moved = true;
+      uploadWrap.scrollLeft = scrollLeft - walk;
+    });
+
+    /* 드래그 후 label(파일선택) 클릭 방지 */
+    uploadWrap.addEventListener('click', function(e) {
+      if (moved) {
+        e.preventDefault();
+        e.stopPropagation();
+        moved = false;
+      }
+    }, true);
+  })();
 </script>
 </body>
 </html>
