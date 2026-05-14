@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품상세 - 스룩페이</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header data-include="header-detail" data-include-title="리얼 고농축 히알루론산 앰플 75ml"></header>
+
+  <main>
+
+    <!-- ===== 1. 메인 이미지 슬라이더 ===== -->
+    <div class="pd-img-slider" id="pdImgSlider">
+      <div class="pd-img-slider__track-wrap">
+        <div class="pd-img-slider__track" id="pdImgTrack">
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb.jpg" alt="상품 이미지 1"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb2.jpg" alt="상품 이미지 2"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb3.jpg" alt="상품 이미지 3"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb4.jpg" alt="상품 이미지 4"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb5.jpg" alt="상품 이미지 5"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb6.jpg" alt="상품 이미지 6"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb7.jpg" alt="상품 이미지 7"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb8.jpg" alt="상품 이미지 8"></div>
+          <div class="pd-img-slider__item"><img src="../images/detail/img_ex/detail_thumb9.jpg" alt="상품 이미지 9"></div>
+        </div>
+      </div>
+      <span class="pd-img-slider__badge">히트상품</span>
+      <div class="pd-img-slider__count">
+        <span class="pd-img-slider__count-cur" id="pdSliderCur">1</span>
+        <span class="pd-img-slider__count-sep"></span>
+        <span class="pd-img-slider__count-tot">9</span>
+      </div>
+    </div>
+
+    <!-- ===== 2. 썸네일 슬라이더 ===== -->
+    <div class="pd-thum-slider">
+      <div class="pd-thum-slider__track" id="pdThumTrack">
+        <button class="pd-thum-slider__item is-active" data-index="0">
+          <img src="../images/detail/img_ex/detail_thumb.jpg" alt="썸네일 1">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="1">
+          <img src="../images/detail/img_ex/detail_thumb2.jpg" alt="썸네일 2">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="2">
+          <img src="../images/detail/img_ex/detail_thumb3.jpg" alt="썸네일 3">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="3">
+          <img src="../images/detail/img_ex/detail_thumb4.jpg" alt="썸네일 4">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="4">
+          <img src="../images/detail/img_ex/detail_thumb5.jpg" alt="썸네일 5">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="5">
+          <img src="../images/detail/img_ex/detail_thumb6.jpg" alt="썸네일 6">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="6">
+          <img src="../images/detail/img_ex/detail_thumb7.jpg" alt="썸네일 7">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="7">
+          <img src="../images/detail/img_ex/detail_thumb8.jpg" alt="썸네일 8">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+        <button class="pd-thum-slider__item" data-index="8">
+          <img src="../images/detail/img_ex/detail_thumb9.jpg" alt="썸네일 9">
+          <div class="pd-thum-slider__overlay">
+            <img src="../images/detail/ic_ac_chek_18px.svg" alt="" class="pd-thum-slider__check">
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== 3. 상품 정보 (product_title) ===== -->
+    <div class="pd-info">
+      <!-- 상품명 -->
+      <p class="pd-info__name">리얼 고농축 히알루론산 앰플 75ml</p>
+      <!-- 가격 -->
+      <div class="pd-info__price-wrap">
+        <p class="pd-info__origin">13,000원</p>
+        <div class="pd-info__price-row">
+          <span class="pd-info__discount">23%</span>
+          <span class="pd-info__price">9,900<span class="pd-info__price-unit">원</span></span>
+        </div>
+      </div>
+      <!-- 평점 + 태그 + 공유 -->
+      <div class="pd-info__flag-wrap">
+        <div class="pd-info__review-row">
+          <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-info__star-sm">
+          <span class="pd-info__rating">4.5</span>
+          <span class="pd-info__sep-dot"></span>
+          <span class="pd-info__review-text">후기</span>
+          <span class="pd-info__review-count">&nbsp;100</span>
+        </div>
+        <div class="pd-info__flag-row">
+          <div class="pd-info__flags-wrap">
+            <span class="pd-info__flag-badge">무료배송</span>
+          </div>
+          <div class="pd-info__actions">
+            <img src="../images/detail/kakao_help.png" alt="카카오 도움말" class="pd-info__kakao">
+            <button class="pd-info__share-btn" aria-label="공유하기">
+              <img src="../images/detail/ic_share.svg" alt="" class="pd-info__share-icon">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ===== 4. 포토후기 미리보기 (product_coments) ===== -->
+    <div class="pd-coments" id="pdComents">
+      <div class="pd-coments__top">
+        <p class="input-label">포토후기</p>
+      </div>
+      <div class="pd-coments__list">
+        <div class="pd-coments__card">
+          <div class="pd-coments__stars">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+          </div>
+          <p class="pd-coments__text">배송이 빠르고 친절합니다. 사용하기 편리하고 소음이 없어서 좋아요.</p>
+        </div>
+        <div class="pd-coments__card">
+          <div class="pd-coments__stars">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+          </div>
+          <p class="pd-coments__text">정말 효과가 좋아요! 피부가 촉촉해진 느낌입니다.</p>
+        </div>
+        <div class="pd-coments__card">
+          <div class="pd-coments__stars">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="pd-coments__star-img">
+          </div>
+          <p class="pd-coments__text">재구매 의사 있어요. 향도 좋고 발림성도 좋습니다.</p>
+        </div>
+        <div class="pd-coments__more">
+          <img src="../images/detail/ic_review_more.svg" alt="더보기" class="pd-coments__more-icon">
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ===== 5. 배송·혜택 정보 (product_benefit) ===== -->
+    <div class="pd-benefit">
+      <!-- 배송 정보 -->
+      <div class="pd-benefit__row">
+        <span class="pd-benefit__label">배송</span>
+        <div class="pd-benefit__list">
+          <p class="pd-benefit__text" style="font-weight:var(--font-weight-semibold);color:var(--font-darkgray);">3000원 선결제</p>
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <span class="pd-benefit__text">상품수량 1개 이상 ~ 9개 미만 배송비 5,000원</span>
+            <img src="../images/detail/ic_arrow_10px_gray.svg" alt="" class="pd-benefit__arrow">
+          </div>
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <span class="pd-benefit__text">묶음 배송</span>
+          </div>
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <span class="pd-benefit__text pd-benefit__text--red">묶음 배송 불가</span>
+          </div>
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <span class="pd-benefit__text">제주도 배송 불가</span>
+          </div>
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <span class="pd-benefit__text">도서산간 배송 불가</span>
+          </div>
+          <div class="pd-benefit__item pd-benefit__item--top">
+            <div class="pd-benefit__dot"></div>
+            <div>
+              <span class="pd-benefit__text pd-benefit__text--blue">해외배송</span>
+              <p class="pd-benefit__sub">해당 상품은 해외에서 국내로 배송되는 상품으로 배송 반품 교환이 일반적인 국내 배송 상품과 다를 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 배송 혜택 -->
+      <div class="pd-benefit__row">
+        <span class="pd-benefit__label">배송 혜택</span>
+        <div class="pd-benefit__list">
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <span class="pd-benefit__text">신용카드 무이자 할부 혜택</span>
+            <img src="../images/detail/ic_arrow_10px_gray.svg" alt="" class="pd-benefit__arrow">
+          </div>
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <span class="pd-benefit__text">주문금액 1,000원 이상 100원 할인</span>
+            <img src="../images/detail/ic_arrow_10px_gray.svg" alt="" class="pd-benefit__arrow">
+          </div>
+          <div class="pd-benefit__item pd-benefit__item--top">
+            <div class="pd-benefit__dot"></div>
+            <div>
+              <span class="pd-benefit__text">정기구독 할인 혜택</span>
+              <p class="pd-benefit__sub">5회차부터 <span class="pd-benefit__sub--red">500원 할인</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 결제 혜택 -->
+      <div class="pd-benefit__row">
+        <span class="pd-benefit__label">결제 혜택</span>
+        <div class="pd-benefit__list">
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <img src="../images/detail/prodct_flag_npay.svg" alt="네이버페이" class="pd-benefit__flag-img">
+            <span class="pd-benefit__text">네이버페이 결제 시 최대 <strong style="color:var(--font-darkgray);">2,000포인트 지급</strong></span>
+            <img src="../images/detail/ic_arrow_10px_gray.svg" alt="" class="pd-benefit__arrow">
+          </div>
+          <div class="pd-benefit__item">
+            <div class="pd-benefit__dot"></div>
+            <img src="../images/detail/prodct_flag_payco.svg" alt="페이코" class="pd-benefit__flag-img">
+            <span class="pd-benefit__text">페이코포인트 결제 시 <strong style="color:var(--font-darkgray);">1% 즉시할인</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ===== 6. 탭 네비게이션 (sticky) ===== -->
+    <div class="pd-tab" id="pdTab">
+      <button class="pd-tab__item is-active" data-target="sec-info">상품정보</button>
+      <button class="pd-tab__item" data-target="sec-review">구매후기<span class="pd-tab__count"> 9999</span></button>
+      <button class="pd-tab__item" data-target="sec-qna">상품문의<span class="pd-tab__count"> 9999</span></button>
+    </div>
+    <div class="pd-tab-dummy" id="pdTabDummy"></div>
+
+    <!-- ===== 7. 상품정보 섹션 ===== -->
+    <section class="pd-section" id="sec-info">
+
+      <!-- 주의사항 박스 -->
+      <div class="pd-caution">
+        <img src="../images/detail/ic_tip_red.svg" alt="" class="pd-caution__icon">
+        <p class="pd-caution__text">
+          <strong>무통장입금 방식</strong>은 <span class="red">가맹점의 계좌로 입금</span>되어, 스룩페이의 결제 대행 서비스에 포함되지 않습니다.<br>
+          스룩페이는 입금 후 발생할 수 있는 <strong>문제(배송, 환불, 취소 요청 등)에 대한 책임을 지지 않으니</strong> 이용 시 유의하시기 바라며, <strong>신뢰할 수 있는 결제 방식</strong>(카드, 간편결제, 가상계좌 등) 이용을 권장합니다.
+        </p>
+      </div>
+
+      <!-- 상품 이미지 영역 (아코디언) -->
+      <div class="pd-img-area is-collapsed" id="pdImgArea">
+        <!-- 유튜브 -->
+        <div class="pd-youtube-wrap" id="youtubeThumb">
+          <div class="pd-youtube-thumb-inner">
+            <img src="https://img.youtube.com/vi/Fn5uWTW9AZ0/hqdefault.jpg" alt="유튜브" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <div class="pd-youtube-gradient"></div>
+            <img src="../images/detail/no_img.jpg" alt="채널 아바타" class="pd-youtube-avatar">
+            <div class="pd-youtube-info">
+              <p class="pd-youtube-title">이번달 오픈 예정 상품 미리보기</p>
+              <p class="pd-youtube-channel">nstreet</p>
+            </div>
+            <!-- 유튜브 플레이 버튼 (SVG) -->
+            <div class="pd-youtube-logo">
+              <svg class="pd-youtube-logo-svg" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="60" height="42" rx="10" fill="#FF0000"/>
+                <path d="M24 30V12l16 9-16 9z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- 상품 상세 이미지 -->
+        <img src="../images/detail/img_ex/12상세_화장품 1.jpg" alt="상품 상세 이미지" class="pd-img-area__img">
+        <!-- 페이드 -->
+        <div class="pd-img-area__fade"></div>
+      </div>
+
+      <!-- 상품 상세 더보기 버튼 -->
+      <button class="pd-more-btn" id="pdMoreBtn">
+        <span id="pdMoreText">상품 상세 더보기</span>
+        <img src="../images/input/ic_arrow_bottom.svg" alt="" class="pd-more-btn__icon" id="pdMoreIcon">
+      </button>
+
+      <!-- 아코디언 (공지사항·배송·교환) -->
+      <div class="pd-accordion" id="detail-info-accordion">
+        <!-- 공지사항 (기본 열린 상태) -->
+        <div class="pd-accordion__item">
+          <button class="pd-accordion__header is-open" onclick="toggleDetailAccordion(this)">
+            <span class="pd-accordion__title">공지사항</span>
+            <img src="../images/input/ic_arrow_bottom.svg" alt="" class="pd-accordion__icon">
+          </button>
+          <div class="pd-accordion__body is-open">
+            <p>구매페이지 공지 문구 설정 공간입니다</p>
+          </div>
+        </div>
+        <!-- 배송정보 -->
+        <div class="pd-accordion__item">
+          <button class="pd-accordion__header" onclick="toggleDetailAccordion(this)">
+            <span class="pd-accordion__title">배송정보</span>
+            <img src="../images/input/ic_arrow_bottom.svg" alt="" class="pd-accordion__icon">
+          </button>
+          <div class="pd-accordion__body">
+            <p>배송 방법: 택배<br>배송 지역: 전국<br>배송 비용: 3,000원 (50,000원 이상 무료배송)<br>배송 기간: 2~3일 이내</p>
+          </div>
+        </div>
+        <!-- 환불 및 교환 정책 -->
+        <div class="pd-accordion__item">
+          <button class="pd-accordion__header" onclick="toggleDetailAccordion(this)">
+            <span class="pd-accordion__title">환불 및 교환 정책</span>
+            <img src="../images/input/ic_arrow_bottom.svg" alt="" class="pd-accordion__icon">
+          </button>
+          <div class="pd-accordion__body">
+            <p>상품 수령 후 7일 이내 교환/반품 가능합니다.<br>단, 개봉·사용한 상품, 포장이 훼손된 경우 교환/반품이 불가합니다.<br>고객 변심에 의한 반품의 경우 왕복 배송비(6,000원)가 부과됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== 8. 구매후기 섹션 ===== -->
+    <section class="pd-section" id="sec-review">
+
+      <!-- 평점 박스 (인터랙션 없음) -->
+      <div class="score-box">
+        <div class="score-box__left">
+          <p class="score-box__avg">4.0</p>
+          <div class="score-box__stars">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="score-box__star">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="score-box__star">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="score-box__star">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="score-box__star">
+            <img src="../images/detail/ic_star_gray.svg" alt="" class="score-box__star">
+          </div>
+        </div>
+        <div class="score-box__right">
+          <div class="review-bar">
+            <span class="review-bar__label">5점</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:0%"></div></div>
+            <span class="review-bar__pct">0%</span>
+          </div>
+          <div class="review-bar is-active">
+            <span class="review-bar__label">4점</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:100%"></div></div>
+            <span class="review-bar__pct">100%</span>
+          </div>
+          <div class="review-bar">
+            <span class="review-bar__label">3점</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:0%"></div></div>
+            <span class="review-bar__pct">0%</span>
+          </div>
+          <div class="review-bar">
+            <span class="review-bar__label">2점</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:0%"></div></div>
+            <span class="review-bar__pct">0%</span>
+          </div>
+          <div class="review-bar">
+            <span class="review-bar__label">1점</span>
+            <div class="review-bar__track"><div class="review-bar__fill" style="width:0%"></div></div>
+            <span class="review-bar__pct">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 구매후기 작성 버튼 -->
+      <button class="review-write-btn" style="margin-top:20px;">
+        구매후기 작성
+        <img src="../images/input/ic_plus.svg" alt="" class="review-write-btn__icon">
+      </button>
+
+      <!-- 포토후기 -->
+      <div class="pd-photo-review" style="margin-top:20px;">
+        <p class="pd-photo-review__label">포토후기</p>
+        <div class="pd-photo-review__list">
+          <div class="pd-photo-review__item"><img src="../images/detail/no_img.jpg" alt="포토후기 1"></div>
+          <div class="pd-photo-review__item"><img src="../images/detail/no_img.jpg" alt="포토후기 2"></div>
+          <div class="pd-photo-review__item"><img src="../images/detail/no_img.jpg" alt="포토후기 3"></div>
+          <div class="pd-photo-review__item"><img src="../images/detail/no_img.jpg" alt="포토후기 4"></div>
+          <div class="pd-photo-review__item"><img src="../images/detail/no_img.jpg" alt="포토후기 5"></div>
+          <div class="pd-photo-review__more"></div>
+        </div>
+      </div>
+
+      <!-- 리뷰 필터 -->
+      <div class="review-filter" style="margin-top:20px;padding-bottom:12px;border-bottom:1px solid var(--line-light);">
+        <p class="review-filter__total">전체 <span class="review-filter__total-count">100</span></p>
+        <div class="review-filter__selects">
+          <div class="review-select-wrap">
+            <select>
+              <option>베스트순</option>
+              <option>최신순</option>
+              <option>추천순</option>
+              <option>평점 높은순</option>
+              <option>평점 낯은순</option>
+            </select>
+          </div>
+          <div class="review-select-wrap">
+            <select>
+              <option>전체 별점</option>
+              <option>5점</option>
+              <option>4점</option>
+              <option>3점</option>
+              <option>2점</option>
+              <option>1점</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- 리뷰 목록 -->
+      <div class="review-list">
+
+        <!-- 리뷰 1 (추천 ON + 사진 포함) -->
+        <div class="review-item">
+          <div class="review-item__top">
+            <div class="review-item__rating-row">
+              <div class="review-item__stars">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+              </div>
+              <span class="review-item__grade" style="margin-left:4px;">최고에요</span>
+              <div style="flex:1;min-width:0;"></div>
+              <button class="review-item__recommend review-item__recommend--on">
+                <img src="../images/detail/ic_recommend_on.svg" alt="" class="review-item__recommend-icon">
+                999
+              </button>
+            </div>
+            <div class="review-item__meta">
+              <span>sr****</span>
+              <span class="review-item__dot"></span>
+              <span>2026.01.15 16:49</span>
+            </div>
+            <div class="review-item__options">
+              <div class="review-item__option-item">
+                <span>색상</span>
+                <span>옐로우</span>
+                <span>(+1000원)</span>
+              </div>
+              &nbsp;
+              <div class="review-item__option-item">
+                <span>사이즈</span>
+                <span>245</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-item__content">
+            <p class="review-item__text">가볍게 러닝 하려고 구매했는데요 일단 착화감이 좋고 아웃솔이 특히 말랑합니다. 일상에서 신기에도 무난해서 다른색으로 한켤레 더 살거 같아요</p>
+            <div class="review-item__photos">
+              <div class="review-item__photo"><img src="../images/detail/no_img.jpg" alt="리뷰 이미지 1"></div>
+              <div class="review-item__photo"><img src="../images/detail/no_img.jpg" alt="리뷰 이미지 2"></div>
+            </div>
+          </div>
+          <div class="review-item__helpful">
+            <p class="review-item__helpful-text">이 리뷰가 도움이 되었나요?</p>
+            <div class="review-item__actions">
+              <button class="review-item__action-btn">수정</button>
+              <span class="review-item__dot"></span>
+              <button class="review-item__action-btn">삭제</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 리뷰 2 (추천 OFF) -->
+        <div class="review-item">
+          <div class="review-item__top">
+            <div class="review-item__rating-row">
+              <div class="review-item__stars">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+                <img src="../images/detail/ic_star_gray.svg" alt="" class="review-item__star">
+              </div>
+              <span class="review-item__grade" style="margin-left:4px;">최고에요</span>
+              <div style="flex:1;min-width:0;"></div>
+              <button class="review-item__recommend">
+                <img src="../images/detail/ic_recommend_off.svg" alt="" class="review-item__recommend-icon">
+                999
+              </button>
+            </div>
+            <div class="review-item__meta">
+              <span>sr****</span>
+              <span class="review-item__dot"></span>
+              <span>2026.01.15 16:49</span>
+            </div>
+            <div class="review-item__options">
+              <div class="review-item__option-item">
+                <span>색상</span>
+                <span>옐로우</span>
+                <span>(+1000원)</span>
+              </div>
+              &nbsp;
+              <div class="review-item__option-item">
+                <span>사이즈</span>
+                <span>245</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-item__content">
+            <p class="review-item__text">배송이 빠르고 친절합니다. 사용하기 편리하고 소음이 없어서 좋아요.</p>
+          </div>
+          <div class="review-item__helpful">
+            <p class="review-item__helpful-text">이 리뷰가 도움이 되었나요?</p>
+            <div class="review-item__actions">
+              <button class="review-item__action-btn">수정</button>
+              <span class="review-item__dot"></span>
+              <button class="review-item__action-btn">삭제</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== 9. 상품문의 섹션 ===== -->
+    <section class="pd-section" id="sec-qna">
+
+      <!-- 상품문의 작성 버튼 -->
+      <button class="qna-write-btn" style="margin-top:20px;">
+        상품문의 작성
+        <img src="../images/input/ic_plus.svg" alt="" class="qna-write-btn__icon">
+      </button>
+
+      <!-- QnA 목록 -->
+      <div class="qna-list" id="qnaList" style="margin-top:20px;">
+
+        <!-- 비밀글 + 대기 -->
+        <div class="qna-item">
+          <button class="qna-item__header" onclick="toggleQnaAccordion(this)">
+            <div class="qna-item__title-row">
+              <img src="../images/detail/ic_secrete.svg" alt="" class="qna-item__secret-icon">
+              <p class="qna-item__title qna-item__title--secret">남성 사이즈는 없나요? 주문시 발송 예정일이 언제인가요?</p>
+            </div>
+            <div class="qna-item__meta-row">
+              <span class="qna-inquiry-flag qna-inquiry-flag--wait">답변대기</span>
+              <div class="qna-item__meta">
+                <span>홍**</span>
+                <span class="review-item__dot"></span>
+                <span>2026.01.15 16:49</span>
+              </div>
+            </div>
+          </button>
+          <div class="qna-item__body">
+            <div class="qna-item__answer">
+              <p style="font-size:var(--font-size-contents3);color:var(--font-lightgray);">아직 답변이 등록되지 않았습니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 공개글 + 답변완료 (답변 포함) -->
+        <div class="qna-item">
+          <button class="qna-item__header" onclick="toggleQnaAccordion(this)">
+            <div class="qna-item__title-row">
+              <p class="qna-item__title">남성 사이즈는 없나요? 주문시 발송 예정일이 언제인가요?</p>
+            </div>
+            <div class="qna-item__meta-row">
+              <span class="qna-inquiry-flag qna-inquiry-flag--done">답변완료</span>
+              <div class="qna-item__meta">
+                <span>홍**</span>
+                <span class="review-item__dot"></span>
+                <span>2026.01.15 16:49</span>
+              </div>
+            </div>
+          </button>
+          <div class="qna-item__body">
+            <div class="qna-item__answer">
+              <div class="qna-item__answer-header">
+                <span class="qna-item__answer-name">스룩샵</span>
+                <span class="qna-item__answer-date">2025.12.31 10:12:59</span>
+              </div>
+              <p class="qna-item__answer-text">안녕하세요 고객님 스룩샵입니다.<br>3월에 재입고 예정에 있습니다.<br>알림설정시 빠르게 재입고 소식을 받아보실 수 있습니다.<br>감사합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 비밀글 + 답변완료 -->
+        <div class="qna-item">
+          <button class="qna-item__header" onclick="toggleQnaAccordion(this)">
+            <div class="qna-item__title-row">
+              <img src="../images/detail/ic_secrete.svg" alt="" class="qna-item__secret-icon">
+              <p class="qna-item__title qna-item__title--secret">비밀글입니다.</p>
+            </div>
+            <div class="qna-item__meta-row">
+              <span class="qna-inquiry-flag qna-inquiry-flag--done">답변완료</span>
+              <div class="qna-item__meta">
+                <span>홍**</span>
+                <span class="review-item__dot"></span>
+                <span>2026.01.15 16:49</span>
+              </div>
+            </div>
+          </button>
+          <div class="qna-item__body">
+            <div class="qna-item__answer">
+              <p style="font-size:var(--font-size-contents3);color:var(--font-lightgray);">비밀글은 작성자와 관리자만 확인할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 더보기로 숨겨지는 항목 -->
+        <div class="qna-item qna-item--hidden" hidden>
+          <button class="qna-item__header" onclick="toggleQnaAccordion(this)">
+            <div class="qna-item__title-row">
+              <p class="qna-item__title">사용 기간은 얼마나 되나요?</p>
+            </div>
+            <div class="qna-item__meta-row">
+              <span class="qna-inquiry-flag qna-inquiry-flag--done">답변완료</span>
+              <div class="qna-item__meta">
+                <span>이**</span>
+                <span class="review-item__dot"></span>
+                <span>2026.01.10 09:00</span>
+              </div>
+            </div>
+          </button>
+          <div class="qna-item__body">
+            <div class="qna-item__answer">
+              <div class="qna-item__answer-header">
+                <span class="qna-item__answer-name">스룩샵</span>
+                <span class="qna-item__answer-date">2026.01.11 10:00:00</span>
+              </div>
+              <p class="qna-item__answer-text">제조일로부터 24개월이며, 개봉 후에는 12개월 이내 사용을 권장합니다.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 더보기 버튼 (3개 초과시 노출) -->
+      <button class="qna-more-btn" id="qnaMoreBtn" onclick="toggleQnaMore()">
+        <span id="qnaMoreText">더보기</span>
+        <img src="../images/input/ic_arrow_bottom.svg" alt="" class="qna-more-btn__icon" id="qnaMoreIcon">
+      </button>
+
+    </section>
+
+    <div class="pd-bottom-spacer"></div>
+
+  </main>
+
+  <!-- ===== 하단 구매 바 ===== -->
+  <div class="pd-buy-bar">
+    <button class="pd-buy-bar__cart" aria-label="장바구니">
+      <img src="../images/header/ic_cart.svg" alt="" class="pd-buy-bar__cart-icon">
+    </button>
+    <button class="pd-buy-bar__buy">구매하기</button>
+  </div>
+
+  <!-- DOCBAR -->
+  <div data-include="docbar"></div>
+
+  <!-- FOOTER -->
+  <footer data-include="footer"></footer>
+
+</div><!-- /page-wrap -->
+
+<!-- GNB -->
+<div data-include="gnb"></div>
+
+<script>var ROOT_PATH = '../';</script>
+<script src="../js/include.js"></script>
+<script src="../js/gnb.js"></script>
+<script src="../js/detail.js"></script>
+</body>
+</html>

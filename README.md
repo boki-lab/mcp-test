@@ -2,7 +2,25 @@
 
 ## 개발 주의사항
 
-### 1. 스타일 가이드 기준으로 코딩
+### 1. 헤더 고정 (sticky)
+
+**모든 헤더는 스크롤 시 상단에 고정**됩니다. `css/style.css`의 `.header` 클래스에 아래가 적용되어 있습니다.
+
+```css
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+```
+
+- 메인 헤더 (`.header`) — sticky, z-index 100
+- 서브 헤더 (`header-back`) — 동일한 `.header` 클래스 사용으로 자동 적용
+- GNB 헤더 (`.gnb-header`) — sticky, z-index 1 (GNB 패널 내부 기준)
+
+---
+
+### 2. 스타일 가이드 기준으로 코딩
 
 모든 HTML 파일은 `style-guide.html`에 정의된 CSS 클래스 체계를 기준으로 작성합니다.
 
@@ -64,7 +82,28 @@
 
 ---
 
-### 4. GNB 카테고리 팝업
+### 4. 팝업 위치 규칙 (모든 팝업 공통)
+
+**모든 팝업(오버레이, 슬라이드 패널 등)은 PC에서도 page-wrap(428px) 영역 안에만 표시합니다.**  
+뷰포트 전체를 덮지 않고, 콘텐츠 영역(428px)을 기준으로 정렬합니다.
+
+구현 시 아래 CSS 수식을 사용합니다. `margin: 0 auto; max-width: 428px` 의 `position: fixed` 버전입니다.
+
+```css
+.popup-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: max(0px, calc(50vw - 214px)); /* page-wrap 좌측 엣지와 동일 */
+  width: 100%;
+  max-width: 428px;
+  overflow: hidden;
+}
+```
+
+---
+
+### 5. GNB 카테고리 팝업
 
 #### 구조 및 파일
 - `inc/gnb.html` — GNB 팝업 HTML (로그인/로그아웃/비회원 top_box + 카테고리 메뉴)
